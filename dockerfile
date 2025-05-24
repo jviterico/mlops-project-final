@@ -1,12 +1,12 @@
 FROM python:3.10
 
-WORKDIR /app
+WORKDIR /app1
 
-COPY app.py .
+COPY app1.py .
 COPY models/ ./models/
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "80"]
+CMD ["uvicorn", "app1:app", "--host", "0.0.0.0", "--port", "80"]
 
